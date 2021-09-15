@@ -12,6 +12,9 @@ var startBtn = document.getElementById("start");
 var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
 
+// sound effects
+var sfxRight = new Audio("assets/sfx/correct.wav");
+var sfxWrong = new Audio("assets/sfx/incorrect.wav");
 
 function startQuiz() {
   // hide start screen
@@ -71,11 +74,15 @@ function questionClick() {
     // display new time on page
     timerEl.textContent = time;
 
-  //Response when incorrect
-  feedbackEl.textContent = "Wrong!";
+    // play "wrong" sound effect
+    sfxWrong.play();
 
-  //Response when correct
-  feedbackEl.textContent = "Correct!";
+    feedbackEl.textContent = "Wrong!";
+  } else {
+    // play "right" sound effect
+    sfxRight.play();
+
+    feedbackEl.textContent = "Correct!";
   }
 
   // flash right/wrong feedback on page for half a second

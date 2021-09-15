@@ -30,7 +30,7 @@ THEN I can save my initials and my score
 
 ## Purpose
 
-The purpose of the assignment was to prepare for future assessments that are typical of the interview process.
+The purpose of the assignment is to prepare for future assessments that are typical of the interview process.
 
 ## Preview
 Upon landing on the page the user is presented with the following screen
